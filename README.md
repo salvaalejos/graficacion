@@ -127,7 +127,7 @@ Este proyecto es un ejercicio práctico donde se realizan operaciones de rotaci�
     cv.destroyAllWindows()
    ```
 ---
-## Practica 2 - Dibujar con OpenCV
+## Practica 2 - Dibujar con OpenCV :white_check_mark:
 
 Este proyecto utiliza OpenCV y NumPy para generar imágenes mediante la creación de formas geométricas simples y degradados. A continuación se detalla cómo funciona el código para crear una escena que incluye un cielo, un sol, montañas, agua, nubes, y árboles.
 
@@ -216,3 +216,4 @@ Este script genera una imagen con:
 - Un degradado de agua debajo del horizonte.
 - Nubes generadas de forma aleatoria.
 - Árboles en el paisaje.
+---
