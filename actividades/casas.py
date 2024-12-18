@@ -35,12 +35,10 @@ def trianguloPascal(n):
 
     return triangulo
 
-def trianguloGL(n, x, y):
+#def trianguloGL(n, x, y):
     
 
-
 #####################################################
-
 def draw_sphere(radius=1, x=0, y=0, z=0):
     glPushMatrix()
     glTranslatef(x, y, z)
