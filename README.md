@@ -16,7 +16,7 @@
 
 # Actividades :heavy_check_mark:
 
-## :star: Tansformaciones - Rotación, escalamiento y traslación de una imagen :white_check_mark:
+## :star: Tansformaciones - Rotación, escalamiento y traslación de una imagen
 Este proyecto es un ejercicio práctico donde se realizan operaciones de rotación, escalado y traslación en una imagen utilizando la librería OpenCV de Python. A través de este código, se transforma una imagen aplicando estas operaciones básicas de procesamiento digital de imágenes.
 
 Archivo `transformaciones_aplicadas.py`
@@ -66,7 +66,7 @@ Archivo `transformaciones_aplicadas.py`
     cv.destroyAllWindows()
    ```
 ---
-## :star: Practica 2 - Dibujar con OpenCV :white_check_mark:
+## :star: Practica 2 - Dibujar con OpenCV
 
 Este proyecto utiliza OpenCV y NumPy para generar imágenes mediante la creación de formas geométricas simples y degradados. A continuación se detalla cómo funciona el código para crear una escena que incluye un cielo, un sol, montañas, agua, nubes, y árboles.
 
@@ -362,7 +362,7 @@ Dibuja una figura basada en una aproximación matemática del logo de Batman.
 - **Matemáticas involucradas**: Funciones cuadráticas y trigonométricas que definen una forma compuesta de curvas.
 - **Gráfica**: Genera puntos en coordenadas `(x, y)` para representar la forma de Batman en la imagen.
 
-![Batman](actividades\resultados\batman.png)
+![Batman](actividades/resultados/batman.png)
 
 ### 2. `corazon()`
 Dibuja un corazón utilizando una curva paramétrica.
@@ -373,7 +373,7 @@ Dibuja un corazón utilizando una curva paramétrica.
   \]
 - **Visualización**: El corazón se dibuja en color morado sobre un fondo blanco.
   
-![Corazón](actividades\resultados\corazon.png)
+![Corazón](actividades/resultados/corazon.png)
 
 ### 3. `estrella()`
 Genera una estrella usando coordenadas polares.
@@ -384,7 +384,7 @@ Genera una estrella usando coordenadas polares.
   \]
 - **Escala**: La estrella se escala por un factor de 200.
 
-![Estrella](actividades\resultados\estrella.png)
+![Estrella](actividades/resultados/estrella.png)
 
 ### 4. `cicloide()`
 Dibuja una cicloide (la curva generada por un punto en una rueda que rueda sin deslizarse).
@@ -395,7 +395,7 @@ Dibuja una cicloide (la curva generada por un punto en una rueda que rueda sin d
   \]
 - **Escala**: El valor de `R` es 20 y la curva se ajusta a una escala acorde a la imagen.
 
-![Cicloide](actividades\resultados\cicloide.png)
+![Cicloide](actividades/resultados/cicloide.png)
 
 ### 5. `animacion_parametrica()`
 Genera una animación de una curva paramétrica que varía con el tiempo.
@@ -412,7 +412,7 @@ Genera una lemniscata de Bernoulli, una figura en forma de "infinito".
   \]
 - **Escala**: La curva se escala por un factor de 300.
 
-![Infinito](actividades\resultados\infinito.png)
+![Infinito](actividades/resultados/infinito.png)
 
 ### 7. `espiral()`
 Dibuja una espiral de Arquímedes.
@@ -423,7 +423,7 @@ Dibuja una espiral de Arquímedes.
   \]
 - **Escala**: La espiral se ajusta con un factor de escala de 10.
 
-![Espiral](actividades\resultados\espiral.png)
+![Espiral](actividades/resultados/espiral.png)
 
 ### 8. `hipocicloide()`
 Dibuja una hipocicloide, una figura generada por un punto de una rueda más pequeña que rueda dentro de una rueda más grande.
@@ -434,7 +434,7 @@ Dibuja una hipocicloide, una figura generada por un punto de una rueda más pequ
   \]
 - **Parámetros**: `a = 5` y `b = 3`.
 
-![Hipocicloide](actividades\resultados\hipocicloide.png)
+![Hipocicloide](actividades/resultados/hipocicloide.png)
 
 ### 9. `rosa()`
 Genera una curva en forma de rosa con 4 pétalos.
@@ -445,7 +445,7 @@ Genera una curva en forma de rosa con 4 pétalos.
   \]
 - **Escala**: Los valores de la curva se amplifican por un factor de 200.
 
-![Rosa](actividades\resultados\rosa.png)
+![Rosa](actividades/resultados/rosa.png)
 
 ### 10. `cardioide()`
 Dibuja una cardioide, una figura en forma de corazón generada por una parábola.
@@ -456,7 +456,7 @@ Dibuja una cardioide, una figura en forma de corazón generada por una parábola
   \]
 - **Escala**: Se utiliza un factor de escala de 100.
 
-![Cardioide](actividades\resultados\cardioide.png)
+![Cardioide](actividades/resultados/cardioide.png)
 
 
 
