@@ -6,7 +6,7 @@
 
 *Nota*: Se realizó solo ya que la gente que conocía o ya no fue, o ya tenían equipos, además los proyectos no se pudieron entregar en persona ya que no lo sabía y no pude ir :disappointed:
 
-## :star: :star: Proyecto 1 - Flujo óptico
+## :star: Proyecto 1 - Flujo óptico
 
 Este proyecto permite detectar el rostro y colocar un cubrebocas, además que se puede rotar y hacer un espejo en el video presionando ciertas teclas, con las teclas también se puede modificar la posicion y "zoom" del cubrebocas.
 
