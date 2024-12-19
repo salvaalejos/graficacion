@@ -2,13 +2,124 @@
 
 # Proyectos :bulb:
 
-:x: Proyectos incompletos
+:o: Hecho por: Salvador Alejos Soria
+
+*Nota*: Se realizó solo ya que la gente que conocía o ya no fue, o ya tenían equipos :disappointed:
+
+:x: Proyecto 2 incompleto
 
 ## Proyecto 1 - Flujo óptico
-:heavy_exclamation_mark: Incompleto, idea que cuando aparezcan ciertas cosas en pantalla se haga cierta acción. 
-- Cuando se abra la boca quitar mascara y cambiar color de video
-- Al mostrar mano rotar video
-- Al presionar una tecla hacer efecto espejo
+
+Este proyecto permite detectar el rostro y colocar un cubrebocas, además que se puede rotar y hacer un espejo en el video presionando ciertas teclas, con las teclas también se puede modificar la posicion y "zoom" del cubrebocas.
+
+### Dependencias
+
+El código requiere las siguientes dependencias:
+
+- **OpenCV** (`cv2`): Para manejo de video, detección de rostros y transformaciones.
+- **NumPy** (`numpy`): Para operaciones matriciales.
+
+Instálalas utilizando `pip`:
+```bash
+pip install opencv-python numpy
+```
+
+### Archivos Requeridos
+
+1. `resources/cubre3.png`: Imagen PNG con canal alfa (transparencia).
+2. `resources/haarcascade_frontalface_alt2.xml`: Clasificador Haar para detección de rostros.
+3. `resources/haarcascade_mcs_mouth.xml`: Clasificador Haar para detección de bocas.
+4. `resources/haarcascade_eye.xml`: Clasificador Haar para detección de ojos.
+
+### Funcionamiento del Código
+
+#### Inicialización
+
+1. **Carga de la Máscara PNG**:
+   ```python
+   mascara = cv2.imread('resources/cubre3.png', cv2.IMREAD_UNCHANGED)
+   ```
+   La imagen debe tener un canal alfa para habilitar la transparencia.
+
+2. **Validación del Canal Alfa**:
+   ```python
+   if mascara.shape[2] != 4:
+       print("Error: La imagen no tiene canal alfa.")
+       exit()
+   ```
+   Si la máscara no tiene un canal alfa, el programa termina.
+
+3. **Carga de Clasificadores Haar**:
+   Se utilizan para detectar rostros, bocas y ojos en el video.
+
+#### Captura de Video
+
+El video se captura desde la cámara predeterminada:
+```python
+video = cv2.VideoCapture(0)
+```
+
+#### Transformaciones
+
+1. **Volteo Horizontal (Espejo)**:
+   ```python
+   if voltear_espejo:
+       frame = cv2.flip(frame, 1)
+   ```
+   Activa o desactiva el efecto de espejo al presionar la tecla `f`.
+
+2. **Rotación 90 Grados**:
+   ```python
+   if rotar_90:
+       frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
+   ```
+   Activa o desactiva la rotación al presionar la tecla `r`.
+
+3. **Desplazamiento Horizontal**:
+   - **Hacia la Izquierda**: `a`
+   - **Hacia la Derecha**: `d`
+   ```python
+   desplazamiento_x -= 10  # Con 'a'
+   desplazamiento_x += 10  # Con 'd'
+   ```
+
+4. **Escalado (Zoom)**:
+   - **Incrementar Zoom**: `z`
+   - **Disminuir Zoom**: `x`
+   ```python
+   factor_escala += 0.1  # Con 'z'
+   factor_escala = max(0.1, factor_escala - 0.1)  # Con 'x'
+   ```
+
+#### Superposición de la Máscara
+
+La máscara se redimensiona y se superpone sobre el video en función del factor de escala y las coordenadas de desplazamiento.
+
+```python
+mascara_redimensionada = cv2.resize(mascara, (nuevo_ancho, nuevo_alto))
+mascara_rgb = mascara_redimensionada[:, :, :3]
+mascara_alpha = mascara_redimensionada[:, :, 3]
+```
+
+Se utiliza el canal alfa de la máscara para determinar las áreas transparentes y visibles.
+
+#### Teclas de Control
+
+- **`q`**: Salir del programa.
+- **`f`**: Activar o desactivar el efecto de espejo.
+- **`r`**: Activar o desactivar la rotación.
+- **`a`**: Mover la máscara hacia la izquierda.
+- **`d`**: Mover la máscara hacia la derecha.
+- **`z`**: Incrementar el zoom de la máscara.
+- **`x`**: Reducir el zoom de la máscara.
+
+#### Finalización
+
+El programa libera los recursos utilizados por la cámara y cierra las ventanas:
+```python
+video.release()
+cv2.destroyAllWindows()
+```
 
 
 ## Proyecto 2 - Ciudad 3D
