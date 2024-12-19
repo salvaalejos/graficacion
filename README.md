@@ -4,11 +4,9 @@
 
 :o: Hecho por: Salvador Alejos Soria
 
-*Nota*: Se realizó solo ya que la gente que conocía o ya no fue, o ya tenían equipos :disappointed:
+*Nota*: Se realizó solo ya que la gente que conocía o ya no fue, o ya tenían equipos, además los proyectos no se pudieron entregar en persona ya que no lo sabía y no pude ir :disappointed:
 
-:x: Proyecto 2 incompleto
-
-## Proyecto 1 - Flujo óptico
+## :star: Proyecto 1 - Flujo óptico
 
 Este proyecto permite detectar el rostro y colocar un cubrebocas, además que se puede rotar y hacer un espejo en el video presionando ciertas teclas, con las teclas también se puede modificar la posicion y "zoom" del cubrebocas.
 
@@ -123,7 +121,96 @@ cv2.destroyAllWindows()
 
 
 ## Proyecto 2 - Ciudad 3D
-:heavy_exclamation_mark: Incompleto, idea ciudad en 3D reutilizando modelos.
+Aquí tienes la documentación del código proporcionado:
+
+---
+
+### **Descripción General**
+Este programa utiliza la biblioteca **PyOpenGL** para crear una escena en 3D que incluye varios elementos, tales como casas, una carretera, árboles, una iglesia, una escuela, una fuente y bancos. El código también implementa la capacidad de mover la cámara dentro de la escena usando el teclado, permitiendo al usuario explorar la escena desde diferentes ángulos.
+
+### **Dependencias**
+- `glfw`: Usada para manejar la ventana y la entrada de teclado.
+- `OpenGL.GL`: Para las operaciones gráficas de OpenGL.
+- `OpenGL.GLU`: Para las utilidades gráficas, como la configuración de la cámara y la creación de formas geométricas.
+
+### **Funciones Principales**
+
+#### `init()`
+Configura las propiedades iniciales de OpenGL:
+- Establece el color de fondo de la escena a un azul cielo.
+- Activa la prueba de profundidad para asegurar que los objetos más cercanos se dibujan sobre los más lejanos.
+- Configura la perspectiva de la cámara.
+
+#### Mover la cámara - `key_callback(window, key, scancode, action, mods)`
+Procesa las entradas de teclado para mover la cámara. Las teclas utilizadas son:
+- **Flechas (arriba, abajo, izquierda, derecha)**: Mueven la cámara en el eje Y y X.
+- **W, S**: Acercan o alejan la cámara en el eje Z.
+
+#### `draw_sphere(radius, x, y, z)`
+Dibuja una esfera en las coordenadas `(x, y, z)` con un radio determinado.
+
+#### `draw_cone(base, height, x, y, z)`
+Dibuja un cono en las coordenadas `(x, y, z)` con una base y altura especificadas.
+
+#### `draw_cylinder(base, height, x, y, z)`
+Dibuja un cilindro en las coordenadas `(x, y, z)` con un radio base y altura especificadas.
+
+#### `draw_cube()`
+Dibuja un cubo, utilizado principalmente para construir las casas y otras estructuras.
+
+#### `draw_roof()`
+Dibuja el techo de una casa, representado por una pirámide sobre el cubo base.
+
+#### `draw_snowman()`
+Dibuja un muñeco de nieve utilizando tres esferas de diferentes tamaños y un cono para la nariz.
+
+#### `draw_road()`
+Dibuja una carretera rectangular con líneas blancas en el centro para representar los carriles.
+
+#### `draw_ground()`
+Dibuja el suelo alrededor de la carretera, representado como un gran plano verde.
+
+#### `draw_tree(x, y, z)`
+Dibuja un árbol utilizando un cilindro para el tronco y un cono para las hojas. Posicionado en las coordenadas `(x, y, z)`.
+
+#### `draw_house()`
+Dibuja una casa utilizando un cubo para la base y una pirámide para el techo, con un muñeco de nieve como decoración.
+
+#### `draw_church()`
+Dibuja una iglesia, que consta de una base rectangular (cubo) y una torre, con una cruz en la parte superior.
+
+#### `draw_school()`
+Dibuja una escuela, representada por un cubo grande como la base y un pequeño cubo para la puerta.
+
+#### `draw_fountain()`
+Dibuja una fuente utilizando un cilindro para la base y una esfera para el agua.
+
+#### `draw_bench()`
+Dibuja un banco de parque con un asiento rectangular y dos soportes (pequeños cubos) en los lados.
+
+#### `draw_scene()`
+Dibuja toda la escena:
+1. Fondo y perspectiva configurados.
+2. El suelo, carretera, casas, iglesia, escuela, fuente, bancos y árboles son renderizados en sus respectivas posiciones.
+
+#### `main()`
+- Inicializa **GLFW** y la ventana de OpenGL.
+- Establece el callback del teclado para mover la cámara.
+- Entra en un bucle donde la escena es renderizada y se procesan eventos de la ventana hasta que el usuario cierra la ventana.
+
+### **Detalles de Implementación**
+- **Cámara**: La cámara se puede mover en tres direcciones usando el teclado.
+- **Geometría**: Se utilizan formas básicas como esferas, conos, cilindros y cubos para construir objetos 3D.
+- **Posicionamiento**: Las posiciones de los objetos se manejan mediante transformaciones (`glTranslatef`) para mover los objetos a las ubicaciones deseadas en la escena.
+
+### **Configuración de la Ventana**
+- La ventana se crea con las dimensiones **800x600** píxeles.
+- El título de la ventana es `"Pueblo"`.
+
+---
+---
+---
+
 
 # Actividades :heavy_check_mark:
 
