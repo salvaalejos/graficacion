@@ -236,7 +236,7 @@ def draw_church():
     # Torre de la iglesia
     glColor3f(0.1, 0.1, 0.4)  # Marrón más oscuro para la torre
     glPushMatrix()
-    glTranslatef(0, 3, 0)
+    glTranslatef(0, 0, 0)
     glScalef(0.5, 2, 0.5)
     draw_cube()
     glPopMatrix()
@@ -244,14 +244,14 @@ def draw_church():
     # Cruz en la cima de la torre
     glColor3f(1, 1, 1)  # Blanco para la cruz
     glPushMatrix()
-    glTranslatef(0, 7.5, 0)
+    glTranslatef(0, 8.5, 0)
     glScalef(0.1, 1, 0.1)
     draw_cube()  # Poste vertical de la cruz
     glPopMatrix()
 
     glColor3f(1, 1, 1)  # Blanco para la cruz
     glPushMatrix()
-    glTranslatef(0, 8, 0)
+    glTranslatef(0, 11.5, 0)
     glScalef(0.5, 0.1, 0.1)
     draw_cube()  # Poste horizontal de la cruz
     glPopMatrix()
