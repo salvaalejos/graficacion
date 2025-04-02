@@ -4,7 +4,7 @@
 
 :o: Hecho por: Salvador Alejos Soria
 
-*Nota*: Se realizó solo ya que la gente que conocía o ya no fue, o ya tenían equipos, además los proyectos no se pudieron entregar en persona ya que no lo sabía y no pude ir :disappointed:
+
 
 ## :star: Proyecto 1 - Flujo óptico
 
